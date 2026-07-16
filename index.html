@@ -1,15 +1,16 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>PRINCE BHAI ARMY</title>
-    <!-- Fast Font Load -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="dns-prefetch" href="https://connect.facebook.net" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap" rel="stylesheet" />
+    
     <style>
         * {
             margin: 0;
@@ -73,6 +74,8 @@
             border-radius: 18px;
             box-shadow: 0 8px 28px rgba(125, 123, 255, 0.35);
             transition: transform .15s ease, opacity .15s ease;
+            border: none;
+            cursor: pointer;
         }
 
         .btn:active {
@@ -100,30 +103,64 @@
             }
         }
     </style>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2244743826345551');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2244743826345551&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 </head>
 <body>
     <div class="wrapper">
         <div class="logo">PRINCE BHAI ARMY</div>
-        <div class="subtitle"> DAILY LIVE SURESHOT<br> JOIN TELEGRAM </div> <a href="https://t.me/+0u2TjraI-rM1ODI1" class="btn"> JOIN TELEGRAM </a>
-        <div class="footer"> ©princebhaiarmy . All rights reserved. </div>
+        <div class="subtitle">DAILY LIVE SURESHOT<br>JOIN TELEGRAM</div>
+        <button id="telegramBtn" class="btn">JOIN TELEGRAM</button>
+        <div class="footer">©PRINCEBHAI098 . All rights reserved.</div>
     </div>
+
+    <!-- Meta Pixel Code (AAPKA PIXEL ID) -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2244743826345551');
+    fbq('track', 'PageView');
+    </script>
+
+    <!-- Lead Event Tracking -->
+    <script>
+    document.getElementById('telegramBtn').addEventListener('click', function(e) {
+        fbq('track', 'Lead', {
+            content_name: 'Telegram Join',
+            value: 0.99,
+            currency: 'USD'
+        });
+        
+        setTimeout(function() {
+            window.open('https://t.me/+0u2TjraI-rM1ODI1', '_blank');
+        }, 100);
+    });
+
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            fbq('track', 'ViewContent', {
+                content_name: 'Telegram Landing Page',
+                content_category: 'lead_page'
+            });
+        }
+    });
+
+    if (window.innerWidth <= 768) {
+        fbq('track', 'Event', {
+            device_type: 'mobile'
+        });
+    }
+    </script>
+
+    <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2244743826345551&ev=PageView&noscript=1" />
+    </noscript>
+
 </body>
 
 </html>
